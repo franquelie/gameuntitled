@@ -2,7 +2,6 @@ package com.example.gameuntitled;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.animation.Animator;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
@@ -71,4 +70,6 @@ public class MainActivity extends AppCompatActivity {
         // Comment out super to prevent any back press action
         // super.onBackPressed();
     }
+
+    // Test Commit and Push
 }
