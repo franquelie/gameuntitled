@@ -2,7 +2,7 @@ package com.example.gameuntitled.gameobject;
 
 import android.graphics.Canvas;
 
-import com.example.gameuntitled.GameDisplay;
+import com.example.gameuntitled.GameDisplay; 
 
 /**
  * GameObject is an abstract class which is the foundation of all world objects in the game.
