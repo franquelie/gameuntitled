@@ -2,7 +2,7 @@ package com.example.gameuntitled.gamepanel;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Paint;
+import android.graphics.Paint; 
 
 import com.example.gameuntitled.Utils;
 
