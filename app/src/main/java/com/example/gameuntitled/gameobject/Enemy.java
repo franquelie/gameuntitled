@@ -3,7 +3,7 @@ package com.example.gameuntitled.gameobject;
 import android.content.Context;
 import androidx.core.content.ContextCompat;
 
-import com.example.gameuntitled.GameLoop;
+import com.example.gameuntitled.GameLoop; 
 import com.example.gameuntitled.R;
 
 /**
