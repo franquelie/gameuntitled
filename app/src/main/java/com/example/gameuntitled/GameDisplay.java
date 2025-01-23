@@ -3,7 +3,7 @@ package com.example.gameuntitled;
 import com.example.gameuntitled.gameobject.GameObject;
 
 public class GameDisplay {
-    private double gameToDisplayCoordinatesOffsetX;
+    private double gameToDisplayCoordinatesOffsetX; 
     private double gameToDisplayCoordinatesOffsetY;
     private double displayCenterX;
     private double displayCenterY;
