@@ -2,7 +2,7 @@ package com.example.gameuntitled.gameobject;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Paint;
+import android.graphics.Paint; 
 
 import com.example.gameuntitled.GameDisplay;
 
