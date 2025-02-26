@@ -27,7 +27,7 @@ import java.util.List;
 
 /**
  * Game manages all objects in the game and is responsible for updating all states and render all
- * objects to the screen
+ * objects to the screen. Player sprite reverted to moving around.
  */
 class Game extends SurfaceView implements SurfaceHolder.Callback {
     private final Joystick joystick;
