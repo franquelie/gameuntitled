@@ -3,8 +3,6 @@ package com.example.gameuntitled;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Paint;
-import androidx.core.content.ContextCompat;
 
 import android.util.DisplayMetrics;
 import android.util.Log;
