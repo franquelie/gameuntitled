@@ -6,6 +6,7 @@ import com.example.gameuntitled.GameDisplay;
 
 /**
  * GameObject is an abstract class which is the foundation of all world objects in the game.
+ * Player sprite revert to moving around.
  */
 public abstract class GameObject {
     protected double positionX = 0;

@@ -17,6 +17,7 @@ import com.example.gameuntitled.graphics.Sprite;
 /**
  * Player is the main character of the game, which the user can control with a touch joystick.
  * The player class is an extension of a Circle, which is an extension of a GameObject
+ * The player sprite was reverted to moving around.
  */
 public class Player extends Circle {
     public static final double SPEED_PIXELS_PER_SECOND = 400.0;

@@ -8,7 +8,7 @@ import com.example.gameuntitled.GameDisplay;
 
 /**
  * Circle is an abstract class which implements a draw method from GameObject for drawing the object
- * as a circle.
+ * as a circle. Player sprite revert to moving around.
  */
 public abstract class Circle extends GameObject {
     protected double radius;
