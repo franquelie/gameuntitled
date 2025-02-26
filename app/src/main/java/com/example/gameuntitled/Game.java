@@ -125,7 +125,9 @@ class Game extends SurfaceView implements SurfaceHolder.Callback {
         super.draw(canvas);
 
         // Draw game objects
-        player.draw(canvas, gameDisplay);
+
+        // player.draw(canvas, gameDisplay); Turning off Center player
+        player.draw(canvas);
 
         for (Enemy enemy : enemyList) {
             enemy.draw(canvas, gameDisplay);

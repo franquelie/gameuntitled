@@ -54,6 +54,13 @@ public class Player extends Circle {
         }
     }
 
+    // Draw method for player moving around the screen
+    public void draw(Canvas canvas) {
+        sprite.draw(canvas, (int) positionX - sprite.getWidth()/2, (int) positionY - sprite.getHeight()/2);
+        healthBar.draw(canvas);
+    }
+
+    // Draw method for player in the middle of the screen
     public void draw(Canvas canvas, GameDisplay gameDisplay) {
 
         sprite.draw(

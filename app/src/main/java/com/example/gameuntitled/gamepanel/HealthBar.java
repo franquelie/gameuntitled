@@ -35,6 +35,34 @@ public class HealthBar {
         healthPaint.setColor(healthColor);
     }
 
+    // HealthBar draw method for player moving around the screen
+    public void draw(Canvas canvas) {
+        float x = (float) player.getPositionX();
+        float y = (float) player.getPositionY();
+        float distanceToPlayer = 30;
+        float healthPointsPercentage = (float) player.getHealthPoints() / player.MAX_HEALTH_POINTS;;
+
+        // Draw border
+        float borderLeft, borderTop, borderRight, borderBottom;
+        borderLeft = x - width/2;
+        borderRight = x + width/2;
+        borderBottom = y - distanceToPlayer; // May need to change later to move the healthBar below Player
+        borderTop = borderBottom - height; // May need to change later to move the healthBar below Player
+        canvas.drawRect(borderLeft, borderTop, borderRight, borderBottom, borderPaint);
+
+        // Draw health
+        float healthLeft, healthTop, healthRight, healthBottom, healthWidth, healthHeight;
+        healthWidth = width - 2*margin;
+        healthHeight = height - 2*margin;
+        healthLeft = borderLeft + margin;
+        healthRight = healthLeft + healthWidth*healthPointsPercentage;
+        healthBottom = borderBottom - margin;
+        healthTop = healthBottom - healthHeight;
+        canvas.drawRect(healthLeft, healthTop, healthRight, healthBottom, healthPaint);
+
+    }
+
+    // HealthBar draw method for player in the middle of the screen
     public void draw(Canvas canvas, GameDisplay gameDisplay) {
         float x = (float) player.getPositionX();
         float y = (float) player.getPositionY();

@@ -38,6 +38,12 @@ public abstract class Circle extends GameObject {
             return false;
     }
 
+    // Circle draw method for player moving around the screen
+    public void draw(Canvas canvas) {
+        canvas.drawCircle((float) positionX, (float) positionY, (float) radius, paint);
+    }
+
+    // Circle draw method for player in the middle of the screen
     public void draw(Canvas canvas, GameDisplay gameDisplay) {
         canvas.drawCircle(
                 (float) gameDisplay.gameToDisplayCoordinatesX(positionX),

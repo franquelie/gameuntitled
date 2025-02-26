@@ -26,7 +26,8 @@ public abstract class GameObject {
     protected double getDirectionX() { return directionX; }
     protected double getDirectionY() { return directionY; }
 
-    public abstract void draw(Canvas canvas, GameDisplay gameDisplay);
+    public abstract void draw(Canvas canvas); // Draw method for player moving around the screen
+    public abstract void draw(Canvas canvas, GameDisplay gameDisplay); // Draw method for player in the middle of the screen
     public abstract void update();
 
     protected static double getDistanceBetweenObjects(GameObject obj1, GameObject obj2) {
