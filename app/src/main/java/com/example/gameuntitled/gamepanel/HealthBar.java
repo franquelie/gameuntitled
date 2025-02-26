@@ -13,6 +13,8 @@ import com.example.gameuntitled.gameobject.Player;
 
 /**
  * HealthBar displays the players health to the screen
+ * Player sprite revert to moving around
+ * THERE IS ERROR THAT HEALTHBAR STILL DECREASES WHEN SPRITE DODGES ENEMIES
  */
 public class HealthBar {
 
