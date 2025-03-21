@@ -10,6 +10,7 @@ import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
+import com.example.gameuntitled.gamemap.Tilemap;
 import com.example.gameuntitled.gameobject.Circle;
 import com.example.gameuntitled.gameobject.Enemy;
 import com.example.gameuntitled.gameobject.Player;
@@ -28,6 +29,7 @@ import java.util.List;
  * objects to the screen. Player sprite reverted to moving around.
  */
 class Game extends SurfaceView implements SurfaceHolder.Callback {
+    private final Tilemap tilemap;
     private final Joystick joystick;
     private final Player player;
     private GameLoop gameLoop;
@@ -59,6 +61,9 @@ class Game extends SurfaceView implements SurfaceHolder.Callback {
         DisplayMetrics displayMetrics = new DisplayMetrics();
         ((Activity) getContext()).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         gameDisplay = new GameDisplay(displayMetrics.widthPixels, displayMetrics.heightPixels, player);
+
+        // Initialize Tilemap
+        tilemap = new Tilemap(spriteSheet);
 
 
         setFocusable(true);
@@ -122,8 +127,10 @@ class Game extends SurfaceView implements SurfaceHolder.Callback {
     public void draw(Canvas canvas) {
         super.draw(canvas);
 
-        // Draw game objects
+        // Draw Tilemap
+        tilemap.draw(canvas, gameDisplay);
 
+        // Draw game objects
         // player.draw(canvas, gameDisplay); Turning off Center player
         player.draw(canvas);
 

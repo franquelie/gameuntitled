@@ -1,17 +1,27 @@
 package com.example.gameuntitled;
 
-import com.example.gameuntitled.gameobject.GameObject;  
+import android.graphics.Rect;
+
+import com.example.gameuntitled.gameobject.GameObject;
 
 public class GameDisplay {
-    private double gameToDisplayCoordinatesOffsetX; 
-    private double gameToDisplayCoordinatesOffsetY; 
+    public final Rect DISPLAY_RECT;
+    private int widthPixels;
+    private int heightPixels;
+    private GameObject centerObject;
     private double displayCenterX;
     private double displayCenterY;
+    private double gameToDisplayCoordinatesOffsetX;
+    private double gameToDisplayCoordinatesOffsetY;
     private double gameCenterX;
     private double gameCenterY;
-    private GameObject centerObject;
+
 
     public GameDisplay(int widthPixels, int heightPixels, GameObject centerObject) {
+        this.widthPixels = widthPixels;
+        this.heightPixels = heightPixels;
+        DISPLAY_RECT = new Rect(0, 0, widthPixels, heightPixels);
+
         this.centerObject = centerObject;
 
         displayCenterX = widthPixels/2.0;
@@ -33,5 +43,14 @@ public class GameDisplay {
 
     public double gameToDisplayCoordinatesY(double y) {
         return y + gameToDisplayCoordinatesOffsetY;
+    }
+
+    public Rect getGameRect() {
+        return new Rect(
+                (int)(gameCenterX - widthPixels/2),
+                (int) (gameCenterY - heightPixels/2),
+                (int) (gameCenterX + widthPixels/2),
+                (int) (gameCenterY + heightPixels/2)
+        );
     }
 }
