@@ -46,6 +46,10 @@ public class SpriteSheet {
         return getSpriteByIndex(1, 4);
     }
 
+    public Sprite getWallSprite() {
+        return getSpriteByIndex(2, 0);
+    }
+
     private Sprite getSpriteByIndex(int idxRow, int idxCol) {
         return new Sprite(this, new Rect(
                 idxCol*SPRITE_WIDTH_PIXELS,

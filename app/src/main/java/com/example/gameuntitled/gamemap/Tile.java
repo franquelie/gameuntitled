@@ -18,7 +18,8 @@ abstract class Tile {
         LAVA_TILE,
         GROUND_TILE,
         GRASS_TILE,
-        TREE_TILE
+        TREE_TILE,
+        WALL_TILE
     }
 
     public static Tile getTile(int idxTileType, SpriteSheet spriteSheet, Rect mapLocationRect) {
@@ -35,6 +36,8 @@ abstract class Tile {
                 return new GrassTile(spriteSheet, mapLocationRect);
             case TREE_TILE:
                 return new TreeTile(spriteSheet, mapLocationRect);
+            case WALL_TILE:
+                return new WallTile(spriteSheet, mapLocationRect);
             default:
                 return null;
         }
